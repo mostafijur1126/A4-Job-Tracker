@@ -11,9 +11,11 @@ const mainContainer = document.getElementById("cards-container");
 const filterSection = document.getElementById("filter-section");
 const totalInterviewCount = document.getElementById("total-interview-count");
 const totalRejectedCount = document.getElementById("total-rejected-count");
+const noJobs = document.getElementById("no-job");
 
 let interviewCount = [];
 let rejectedCount = [];
+let currentFilter = "all";
 
 // Total count
 updateCount();
@@ -25,12 +27,37 @@ btnDelete.forEach(btn => {
     })
 })
 
+filterAllBtn.addEventListener("click" , function(){
+    currentFilter = "all";
+    updateCount();
+});
+filterIntervewBtn.addEventListener("click" , function(){
+    currentFilter = "interview";
+    updateCount();
+});
+filterRejectedBtn.addEventListener("click" , function(){
+    currentFilter = "rejected";
+    updateCount();
+});
+
 function updateCount() {
     const totalCards = document.querySelectorAll(".job-card").length;
     totalJobCount.innerText = totalCards;
     JobCounter.innerText = totalCards;
     totalInterviewCount.innerText = interviewCount.length;
     totalRejectedCount.innerText = rejectedCount.length;
+
+    noJobs.classList.add('hidden');
+
+    if(currentFilter === "all" && totalCards === 0){
+        noJobs.classList.remove('hidden');
+    }
+    if(currentFilter === "interview" && interviewCount.length === 0){
+        noJobs.classList.remove('hidden');
+    }
+    if(currentFilter === "rejected" && rejectedCount.length === 0){
+        noJobs.classList.remove('hidden');
+    }
 }
 
 
@@ -50,6 +77,7 @@ function btnToggleing(id) {
 
 
     if(id == "filter-interview-btn"){
+        
         mainContainer.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderingIntervewcard();
@@ -117,7 +145,7 @@ mainContainer.addEventListener("click", function (event) {
         interviewCount = interviewCount.filter(item => item.companyName != cardInfo.companyName);
         updateCount();
         // renderingRejectedcard();
-        console.log(cardInfo)
+        // console.log(cardInfo)
     }
 
     // console.log(renderingIntervewcard());
