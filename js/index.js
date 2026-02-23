@@ -48,7 +48,6 @@ function updateCount() {
         noJobs.classList.remove('hidden');
     }
 }
-// console.log(currentStatus)
 updateCount();
 
 
@@ -90,34 +89,6 @@ function btnToggleing(id) {
     }
     updateCount();
 }
-
-
-
-
-
-// // Total count
-// btnDelete.forEach(btn => {
-//     btn.addEventListener("click", function () {
-//         const card = this.closest(".job-card");
-//         card.remove();
-//         updateCount();
-//     })
-// })
-
-// filterAllBtn.addEventListener("click", function () {
-//     currentFilter = "all";
-//     updateCount();
-// });
-// filterIntervewBtn.addEventListener("click", function () {
-//     currentFilter = "interview";
-//     updateCount();
-// });
-// filterRejectedBtn.addEventListener("click", function () {
-//     currentFilter = "rejected";
-//     updateCount();
-// });
-
-
 
 mainContainer.addEventListener("click", function (event) {
     if (event.target.classList.contains("interview-btn")) {
