@@ -1,6 +1,6 @@
 let interviewCount = [];
 let rejectedCount = [];
-let currentStatus = "all";
+let currentStatus = "filter-all-btn";
 
 const filterAllBtn = document.getElementById("filter-all-btn");
 const filterIntervewBtn = document.getElementById("filter-interview-btn");
@@ -17,7 +17,7 @@ const mainContainer = document.querySelector('main');
 const filterSection = document.getElementById("filter-section");
 
 
-// const btnDelete = document.querySelectorAll(".btn-delete");
+const btnDelete = document.querySelectorAll(".btn-delete");
 const noJobs = document.getElementById("no-job");
 
 
@@ -64,10 +64,10 @@ function btnToggleing(id) {
         cardContainer.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderingIntervewcard();
-    }else if (id == "filter-all-btn") {
+    } else if (id == "filter-all-btn") {
         cardContainer.classList.remove('hidden');
         filterSection.classList.add('hidden');
-    }else if (id == "filter-rejected-btn") {
+    } else if (id == "filter-rejected-btn") {
         cardContainer.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderingRejectedcard();
@@ -123,7 +123,7 @@ mainContainer.addEventListener("click", function (event) {
             jobType,
             decription
         }
-        
+
 
         const cardInfoExcist = interviewCount.find(item => item.companyName == cardInfo.companyName);
         if (!cardInfoExcist) {
@@ -167,6 +167,19 @@ mainContainer.addEventListener("click", function (event) {
         } else if (currentStatus === "filter-rejected-btn") {
             renderingRejectedcard();
         }
+    }else if(event.target.closest(".btn-delete")){
+        const card = event.target.closest(".job-card");
+        const companyName = card.querySelector(".Company-name").innerText;
+        card.remove();
+        interviewCount = interviewCount.filter(item => item.companyName !== companyName);
+        rejectedCount = rejectedCount.filter(item => item.companyName !== companyName);
+        if(currentStatus === "filter-interview-btn"){
+            renderingIntervewcard
+        }else if (currentStatus === "filter-rejected-btn") {
+            renderingRejectedcard();
+        }
+
+        updateCount();
     }
 
 })
