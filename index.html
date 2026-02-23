@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-blue-50">
 
 <head>
     <meta charset="UTF-8">
@@ -23,9 +23,9 @@
     </style>
 </head>
 
-<body class="bg-blue-50">
+<body>
     <header class="w-9/12 m-auto sticky z-10">
-        <h1 class="text-3xl text-blue-900 font-bold py-5">Job Application Tracker</h1>
+        <h1 class="md:text-2xl lg:text-3xl text-blue-900 font-bold py-5">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-5 pb-5 border-b border-gray-200">
             <div class="bg-white shadow p-5 rounded">
                 <h4>Total</h4>
@@ -45,7 +45,9 @@
         <section id="job-section" class="space-y-5">
             <div class="flex justify-between">
                 <h2 class="text-2xl text-blue-900 font-bold">Available Jobs</h2>
-                <p><span id="job-counter">0</span> jobs</p>
+                <p id="left-job-counter-parent"><span id="job-counter">0</span> Jobs</p>
+                <p id="left-intervew-count-parent" class="hidden"><span id="left-intervew-count">0</span> Jobs</p>
+                <p id="left-rejected-count-parent" class="hidden"><span id="left-rejected-count">0</span> Jobs</p>
             </div>
             <div id="jobs-filtering-btn" class=" flex gap-3">
                 <button onclick="btnToggleing('filter-all-btn')" id="filter-all-btn"
@@ -227,8 +229,8 @@
                 </div>
             </div>
         </section>
-        
-        <section id="no-job" class=" hidden">
+
+        <section id="no-job" class=" hidden mt-5">
             <div class="flex flex-col items-center p-10 py-20 bg-white rounded shadow ">
                 <img class="h-48 w-96 object-contain" src="images/jobs.png" alt="">
                 <h2 class="text-3xl font-bold text-gray-500">No jobs Available</h2>

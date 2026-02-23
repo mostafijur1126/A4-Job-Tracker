@@ -8,8 +8,13 @@ const filterRejectedBtn = document.getElementById("filter-rejected-btn");
 
 const totalJobCount = document.getElementById("total-job-count");
 const JobCounter = document.getElementById("job-counter");
+const leftJobCounterParent =document.getElementById("left-job-counter-parent");
 const totalInterviewCount = document.getElementById("total-interview-count");
+const leftIntervewCount =document.getElementById("left-intervew-count");
+const leftIntervewCountParent =document.getElementById("left-intervew-count-parent");
 const totalRejectedCount = document.getElementById("total-rejected-count");
+const leftRejectedCount = document.getElementById("left-rejected-count");
+const leftRejectedCountParent = document.getElementById("left-rejected-count-parent");
 
 const cardContainer = document.getElementById("cards-container");
 const mainContainer = document.querySelector('main');
@@ -27,7 +32,9 @@ function updateCount() {
     totalJobCount.innerText = cardContainer.children.length;
     JobCounter.innerText = cardContainer.children.length;
     totalInterviewCount.innerText = interviewCount.length;
+    leftIntervewCount.innerText = interviewCount.length;
     totalRejectedCount.innerText = rejectedCount.length;
+    leftRejectedCount.innerText = rejectedCount.length;
 
     noJobs.classList.add('hidden');
 
@@ -63,13 +70,22 @@ function btnToggleing(id) {
     if (id == "filter-interview-btn") {
         cardContainer.classList.add('hidden');
         filterSection.classList.remove('hidden');
+        leftIntervewCountParent.classList.remove('hidden');
+        leftRejectedCountParent.classList.add('hidden');
+        leftJobCounterParent.classList.add('hidden');
         renderingIntervewcard();
     } else if (id == "filter-all-btn") {
         cardContainer.classList.remove('hidden');
         filterSection.classList.add('hidden');
+        leftIntervewCountParent.classList.add('hidden');
+        leftRejectedCountParent.classList.add('hidden');
+        leftJobCounterParent.classList.remove('hidden');
     } else if (id == "filter-rejected-btn") {
         cardContainer.classList.add('hidden');
         filterSection.classList.remove('hidden');
+        leftIntervewCountParent.classList.add('hidden');
+        leftRejectedCountParent.classList.remove('hidden');
+        leftJobCounterParent.classList.add('hidden');
         renderingRejectedcard();
     }
     updateCount();
