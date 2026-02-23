@@ -40,28 +40,28 @@
                 <p id="total-rejected-count" class="text-2xl text-red-500 font-bold">0</p>
             </div>
         </div>
-        <section class="pt-5">
-            <div id="job-section" class="space-y-5">
-                <div class="flex justify-between">
-                    <h2 class="text-2xl text-blue-900 font-bold">Available Jobs</h2>
-                    <p><span id="job-counter">0</span> jobs</p>
-                </div>
-                <div id="jobs-filtering-btn" class=" flex gap-3">
-                    <button onclick="btnToggleing('filter-all-btn')" id="filter-all-btn"
-                        class="btn btn-active btn-info">All</button>
-                    <button onclick="btnToggleing('filter-interview-btn')" id="filter-interview-btn"
-                        class="btn btn-outline btn-info">Interview</button>
-                    <button onclick="btnToggleing('filter-rejected-btn')" id="filter-rejected-btn"
-                        class="btn btn-outline btn-info">Rejected</button>
-                </div>
+    </header>
+    <main class="w-9/12 m-auto py-5">
+        <section id="job-section" class="space-y-5">
+            <div class="flex justify-between">
+                <h2 class="text-2xl text-blue-900 font-bold">Available Jobs</h2>
+                <p><span id="job-counter">0</span> jobs</p>
+            </div>
+            <div id="jobs-filtering-btn" class=" flex gap-3">
+                <button onclick="btnToggleing('filter-all-btn')" id="filter-all-btn"
+                    class="btn btn-active btn-info">All</button>
+                <button onclick="btnToggleing('filter-interview-btn')" id="filter-interview-btn"
+                    class="btn btn-outline btn-info">Interview</button>
+                <button onclick="btnToggleing('filter-rejected-btn')" id="filter-rejected-btn"
+                    class="btn btn-outline btn-info">Rejected</button>
             </div>
         </section>
-    </header>
-    <section class="w-9/12 m-auto py-5">
-        <div id="filter-section" class="hidden">
+
+        <section id="filter-section" class="hidden">
             
-        </div>
-        <div id="cards-container">
+        </section>
+
+        <section id="cards-container">
             <div class=" job-card flex justify-between bg-white shadow rounded p-5 mt-5">
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">Mobile First Corp</p>
@@ -226,15 +226,16 @@
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
-        </div>
-        <div id="no-job" class=" hidden">
+        </section>
+        
+        <section id="no-job" class=" hidden">
             <div class="flex flex-col items-center p-10 py-20 bg-white rounded shadow ">
                 <img class="h-48 w-96 object-contain" src="images/jobs.png" alt="">
                 <h2 class="text-3xl font-bold text-gray-500">No jobs Available</h2>
                 <p class="text-xl text-gray-500">Check back soon for new job opportunities</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <script src="js/index.js"></script>
 </body>
 
