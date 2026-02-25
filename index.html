@@ -27,15 +27,15 @@
     <header class="w-9/12 m-auto sticky z-10">
         <h1 class="md:text-2xl lg:text-3xl text-blue-900 font-bold py-5">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-5 pb-5 border-b border-gray-200">
-            <div class="bg-white shadow p-5 rounded">
+            <div class="bg-white shadow flex flex-col items-center justify-center p-3 lg:p-5 rounded">
                 <h4>Total</h4>
                 <p id="total-job-count" class="text-2xl text-blue-900 font-bold">0</p>
             </div>
-            <div class="bg-white shadow p-5 rounded">
+            <div class="bg-white shadow flex flex-col items-center justify-center p-3 lg:p-5 rounded">
                 <h4>Interview</h4>
                 <p id="total-interview-count" class="text-2xl text-green-500 font-bold">0</p>
             </div>
-            <div class="bg-white shadow p-5 rounded">
+            <div class="bg-white shadow flex flex-col items-center justify-center p-3 lg:p-5 rounded">
                 <h4>Rejected</h4>
                 <p id="total-rejected-count" class="text-2xl text-red-500 font-bold">0</p>
             </div>
@@ -45,9 +45,9 @@
         <section id="job-section" class="space-y-5">
             <div class="flex justify-between">
                 <h2 class="text-2xl text-blue-900 font-bold">Available Jobs</h2>
-                <p id="left-job-counter-parent"><span id="job-counter">0</span> Jobs</p>
-                <p id="left-intervew-count-parent" class="hidden"><span id="left-intervew-count">0</span> Jobs</p>
-                <p id="left-rejected-count-parent" class="hidden"><span id="left-rejected-count">0</span> Jobs</p>
+                <p id="left-job-counter-parent"><span id="job-counter" class="text-blue-900 font-bold">0</span> Jobs</p>
+                <p id="left-intervew-count-parent" class="hidden"><span id="left-intervew-count" class=" text-green-500 font-bold">0</span> Jobs</p>
+                <p id="left-rejected-count-parent" class="hidden"><span id="left-rejected-count" class="text-red-500 font-bold">0</span> Jobs</p>
             </div>
             <div id="jobs-filtering-btn" class=" flex gap-3">
                 <button onclick="btnToggleing('filter-all-btn')" id="filter-all-btn"
@@ -80,7 +80,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -161,7 +161,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -182,7 +182,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -203,7 +203,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -224,7 +224,7 @@
                 </div>
                 <div>
                     <button
-                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                        class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                             class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
@@ -233,8 +233,8 @@
         <section id="no-job" class=" hidden mt-5">
             <div class="flex flex-col items-center p-10 py-20 bg-white rounded shadow ">
                 <img class="h-48 w-96 object-contain" src="images/jobs.png" alt="">
-                <h2 class="text-3xl font-bold text-gray-500">No jobs Available</h2>
-                <p class="text-xl text-gray-500">Check back soon for new job opportunities</p>
+                <h2 class="text-xl lg:text-3xl font-bold text-gray-500">No jobs Available</h2>
+                <p class="text-[16px] text-center text-gray-500">Check back soon for new job opportunities</p>
             </div>
         </section>
     </main>

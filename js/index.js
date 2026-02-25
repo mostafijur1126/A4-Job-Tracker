@@ -161,7 +161,7 @@ mainContainer.addEventListener("click", function (event) {
         interviewCount = interviewCount.filter(item => item.companyName !== companyName);
         rejectedCount = rejectedCount.filter(item => item.companyName !== companyName);
         if(currentStatus === "filter-interview-btn"){
-            renderingIntervewcard
+            renderingIntervewcard();
         }else if (currentStatus === "filter-rejected-btn") {
             renderingRejectedcard();
         }
@@ -189,7 +189,7 @@ function renderingIntervewcard() {
             </div>
             <div>
                 <button
-                    class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                    class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                         class="fa-regular fa-trash-can"></i></button>
             </div>
         `;
@@ -217,7 +217,7 @@ function renderingRejectedcard() {
             </div>
             <div>
                 <button
-                    class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full"><i
+                    class="btn-delete cursor-pointer border border-gray-300 text-gray-400 w-10 h-10 rounded-full hover:text-red-500 hover:border-red-300"><i
                         class="fa-regular fa-trash-can"></i></button>
             </div>
         `;
