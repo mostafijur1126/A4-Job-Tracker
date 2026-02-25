@@ -100,17 +100,21 @@ mainContainer.addEventListener("click", function (event) {
         cardStatus.innerText = "Intervew";
         const companyName = parentNode.querySelector('.Company-name').innerText;
         const position = parentNode.querySelector('.position').innerText;
-        const jobType = parentNode.querySelector('.job-type').innerText;
+        const location = parentNode.querySelector('.location').innerText;
+        const type = parentNode.querySelector('.type').innerText;
+        const salary = parentNode.querySelector('.salary').innerText;
         const decription = parentNode.querySelector('.decription').innerText;
 
         const cardInfo = {
             companyName,
             position,
             updateStatus,
-            jobType,
+            location,
+            type,
+            salary,
             decription
         }
-
+        console.log(location);
 
         const cardInfoExcist = interviewCount.find(item => item.companyName == cardInfo.companyName);
         if (!cardInfoExcist) {
@@ -132,14 +136,18 @@ mainContainer.addEventListener("click", function (event) {
         cardStatus.classList.add('btn', 'btn-outline', 'btn-secondary', 'bg-white', 'text-red-500', 'font-medium');
         const companyName = parentNode.querySelector('.Company-name').innerText;
         const position = parentNode.querySelector('.position').innerText;
-        const jobType = parentNode.querySelector('.job-type').innerText;
+        const location = parentNode.querySelector('.location').innerText;
+        const type = parentNode.querySelector('.type').innerText;
+        const salary = parentNode.querySelector('.salary').innerText;
         const decription = parentNode.querySelector('.decription').innerText;
 
         const cardInfo = {
             companyName,
             position,
             updateStatus,
-            jobType,
+            location,
+            type,
+            salary,
             decription
         }
 
@@ -154,6 +162,7 @@ mainContainer.addEventListener("click", function (event) {
         } else if (currentStatus === "filter-rejected-btn") {
             renderingRejectedcard();
         }
+
     }else if(event.target.closest(".btn-delete")){
         const card = event.target.closest(".job-card");
         const companyName = card.querySelector(".Company-name").innerText;
@@ -179,7 +188,7 @@ function renderingIntervewcard() {
             <div id="card-item" class="space-y-4">
                 <p class="Company-name text-2xl font-medium text-blue-900">${item.companyName}</p>
                 <p class="position text-gray-500 font-medium text-[18px]">${item.position}</p>
-                <p class="job-type text-gray-500 font-medium">${item.jobType}</p>
+                <p class=" text-gray-500 font-medium"><span class="location">${item.location} </span>• <span class="type">${item.type}</span> • <span class="salary">${item.salary}</span></p>
                 <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">${item.updateStatus}</button>
                 <p class="decription text-gray-500 font-medium">${item.decription}</p>
                 <div class="flex gap-3">
@@ -207,7 +216,7 @@ function renderingRejectedcard() {
             <div id="card-item" class="space-y-4">
                 <p class="Company-name text-2xl font-medium text-blue-900">${item.companyName}</p>
                 <p class="position text-gray-500 font-medium text-[18px]">${item.position}</p>
-                <p class="job-type text-gray-500 font-medium">${item.jobType}</p>
+                <p class=" text-gray-500 font-medium"><span class="location">${item.location} </span>• <span class="type">${item.type}</span> • <span class="salary">${item.salary}</span></p>
                 <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">${item.updateStatus}</button>
                 <p class="decription text-gray-500 font-medium">${item.decription}</p>
                 <div class="flex gap-3">

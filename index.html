@@ -46,8 +46,10 @@
             <div class="flex justify-between">
                 <h2 class="text-2xl text-blue-900 font-bold">Available Jobs</h2>
                 <p id="left-job-counter-parent"><span id="job-counter" class="text-blue-900 font-bold">0</span> Jobs</p>
-                <p id="left-intervew-count-parent" class="hidden"><span id="left-intervew-count" class=" text-green-500 font-bold">0</span> Jobs</p>
-                <p id="left-rejected-count-parent" class="hidden"><span id="left-rejected-count" class="text-red-500 font-bold">0</span> Jobs</p>
+                <p id="left-intervew-count-parent" class="hidden"><span id="left-intervew-count"
+                        class=" text-green-500 font-bold">0</span> Jobs</p>
+                <p id="left-rejected-count-parent" class="hidden"><span id="left-rejected-count"
+                        class="text-red-500 font-bold">0</span> Jobs</p>
             </div>
             <div id="jobs-filtering-btn" class=" flex gap-3">
                 <button onclick="btnToggleing('filter-all-btn')" id="filter-all-btn"
@@ -60,7 +62,7 @@
         </section>
 
         <section id="filter-section" class="hidden">
-            
+
         </section>
 
         <section id="cards-container">
@@ -68,7 +70,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">Mobile First Corp</p>
                     <p class="position text-gray-500 font-medium text-[18px]">React Native Developer</p>
-                    <p class="job-type text-gray-500 font-medium">Remote • Full-time • $130,000 - $175,000</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">Remote </span>• <span class="type">Full-time</span> • <span class="salary">$130,000 - $175,000</span></p>
                     <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">Build cross-platform mobile applications using
@@ -88,7 +90,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">WebFlow Agency</p>
                     <p class="position text-gray-500 font-medium text-[18px]">Web Designer & Developer</p>
-                    <p class="job-type text-gray-500 font-medium">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">Los Angeles, CA </span>• <span class="type">Part-time</span> • <span class="salary">$80,000 - $120,000</span></p>
                     <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">Create stunning web experiences for high-profile
@@ -108,7 +110,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">DataViz Solutions</p>
                     <p class="position text-gray-500 font-medium text-[18px]">Data Visualization Specialist</p>
-                    <p class="job-type text-gray-500 font-medium">Boston, MA • Full-time • $125,000 - $165,000</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">Boston, MA</span> • <span class="type">Full-time</span> • <span class="salary">$125,000 - $165,000</span></p>
                     <button class=" card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">Transform complex data into compelling
@@ -129,7 +131,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">CloudFirst Inc</p>
                     <p class="position text-gray-500 font-medium text-[18px]">Backend Developer</p>
-                    <p class="job-type text-gray-500 font-medium">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">Seattle, WA</span> • <span class="type">Full-time</span> • <span class="salary">$140,000 - $190,000</span></p>
                     <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">Design and maintain scalable backend systems using
@@ -149,7 +151,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">Innovation Labs</p>
                     <p class="position text-gray-500 font-medium text-[18px]">UI/UX Engineer</p>
-                    <p class="job-type text-gray-500 font-medium">Austin, TX • Full-time • $110,000 - $150,000</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">Austin, TX</span> • <span class="type">Full-time</span> • <span class="salary">$110,000 - $150,000</span></p>
                     <button class=" card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">Create beautiful and functional user interfaces for
@@ -169,7 +171,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">MegaCorp Solutions</p>
                     <p class="position text-gray-500 font-medium text-[18px]">JavaScript Developer</p>
-                    <p class="job-type text-gray-500 font-medium">New York, NY • Full-time • $130,000 - $170,00</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">New York, NY</span> • <span class="type">Full-time</span> • <span class="salary">$130,000 - $170,00</span></p>
                     <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">Build enterprise applications with JavaScript and
@@ -190,7 +192,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">StartupXYZ</p>
                     <p class="position text-gray-500 font-medium text-[18px]">Full Stack Engineer</p>
-                    <p class="job-type text-gray-500 font-medium">Remote • Full-time • $120,000 - $160,000</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">Remote</span> • <span class="type">Full-time</span> • <span class="salary">$120,000 - $160,000</span></p>
                     <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">Join our fast-growing startup and work on our core
@@ -211,7 +213,7 @@
                 <div id="card-item" class="space-y-4">
                     <p class="Company-name text-2xl font-medium text-blue-900">TechCorp Industries</p>
                     <p class="position text-gray-500 font-medium text-[18px]">Senior Frontend Developer</p>
-                    <p class="job-type text-gray-500 font-medium">an Francisco, CA • Full-time • $130,000 - $175,000</p>
+                    <p class=" text-gray-500 font-medium"><span class="location">an Francisco, CA</span> • <span class="type">Full-time</span> • <span class="salary">$130,000 - $175,000</span></p>
                     <button class="card-status px-5 py-2 rounded bg-blue-100 text-blue-900 font-medium">Not
                         Applied</button>
                     <p class="decription text-gray-500 font-medium">We are looking for an experienced Frontend Developer
